@@ -1,0 +1,8 @@
+{
+  "name": "dev-utils",
+  "description": "타입 체크, 공용 lib 패키지에 라이브러리 추가 등 프로젝트 구조에 거의 무관한 범용 개발 유틸.",
+  "version": "0.1.0",
+  "author": {
+    "name": "moonsj"
+  }
+}

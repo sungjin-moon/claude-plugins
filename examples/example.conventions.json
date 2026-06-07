@@ -1,0 +1,66 @@
+{
+  "// 설명": "가상의 'acme' 프로젝트 예시. 특정 회사와 무관한 중립 샘플이다. 실제 값은 각 프로젝트의 .claude/conventions.json에 넣는다. (보통 /frontend-architecture:init 으로 자동 생성)",
+
+  "monorepo": {
+    "tool": "turbo",
+    "packageManager": "pnpm",
+    "appsDir": "apps",
+    "packagesDir": "packages"
+  },
+  "apps": [
+    { "name": "web",        "port": 3000, "tier": "new",    "framework": "next", "styling": "tailwind",    "alias": "@web" },
+    { "name": "admin",      "port": 3001, "tier": "new",    "framework": "next", "styling": "panda",       "alias": "@admin",  "styledSystemImport": "@admin/ui/styled-system/css" },
+    { "name": "legacy-web", "port": 4000, "tier": "legacy", "framework": "next", "styling": "css-modules" }
+  ],
+  "packages": {
+    "scope": "@acme",
+    "ui": "@acme/ui",
+    "uiComponentsImport": "@acme/ui/components",
+    "lib": "@acme/lib",
+    "api": "@acme/api"
+  },
+  "styling": {
+    "system": "panda",
+    "semanticTokens": true,
+    "tokenDocSection": "ARCHITECTURE.md#design-tokens"
+  },
+  "api": {
+    "client": "ky",
+    "clientArgFirst": true,
+    "schemaLib": "zod",
+    "pathPattern": "packages/api/<domain>/<version>",
+    "domains": ["public", "admin"],
+    "queryLib": "tanstack-query"
+  },
+  "icons": {
+    "package": "@acme/ui",
+    "componentsDir": "packages/ui/src/components/icon",
+    "buildCommand": "pnpm --filter @acme/ui build:icons"
+  },
+  "migration": {
+    "referenceApp": "admin",
+    "legacyApps": ["legacy-web"],
+    "importMap": {
+      "utils": "@acme/lib",
+      "ui": "@acme/ui"
+    }
+  },
+  "postman": {
+    "workspaceId": "<postman-workspace-id>",
+    "collections": {
+      "admin": { "id": "<collection-id>", "baseUrlVar": "AdminApiBaseUrl" }
+    }
+  },
+  "workflow": {
+    "jira": {
+      "projectKeys": ["PROJ"],
+      "doneStatus": "In Review",
+      "aiMarker": "🤖 AI 처리됨"
+    },
+    "slack": {
+      "notifyChannel": "C0EXAMPLE",
+      "notifyEpicReporter": true
+    }
+  },
+  "architectureDoc": "ARCHITECTURE.md"
+}

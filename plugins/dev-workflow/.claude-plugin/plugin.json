@@ -1,0 +1,8 @@
+{
+  "name": "dev-workflow",
+  "description": "Jira 이슈 분석·수정 시작, QA 전환·Slack 알림, 빌드, 개발 서버 실행 등 개발 워크플로우 자동화. 프로젝트 설정은 .claude/conventions.json에서 읽는다.",
+  "version": "0.1.0",
+  "author": {
+    "name": "moonsj"
+  }
+}

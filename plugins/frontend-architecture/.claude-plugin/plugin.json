@@ -1,0 +1,8 @@
+{
+  "name": "frontend-architecture",
+  "description": "프로젝트의 ARCHITECTURE.md와 .claude/conventions.json을 읽어 그 컨벤션대로 페이지/컴포넌트/API/리뷰/마이그레이션을 수행하는 컨벤션 구동형 프론트엔드 도구.",
+  "version": "0.1.0",
+  "author": {
+    "name": "moonsj"
+  }
+}

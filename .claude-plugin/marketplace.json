@@ -1,0 +1,27 @@
+{
+  "name": "moonsj-tools",
+  "owner": {
+    "name": "moonsj"
+  },
+  "description": "moonsj 개인 업무 패턴 도구 모음. 프로젝트 중립(컨벤션 구동형) 프론트엔드 스킬/에이전트, Jira·Slack 워크플로우, 공용 유틸.",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "frontend-architecture",
+      "source": "frontend-architecture",
+      "description": "프로젝트의 ARCHITECTURE.md를 읽어 그 컨벤션대로 페이지/컴포넌트/API/리뷰를 생성하는 컨벤션 구동형 프론트엔드 도구."
+    },
+    {
+      "name": "dev-workflow",
+      "source": "dev-workflow",
+      "description": "Jira 이슈 처리·QA 전환·Slack 알림, 빌드, 개발 서버 실행 등 개발 워크플로우 자동화."
+    },
+    {
+      "name": "dev-utils",
+      "source": "dev-utils",
+      "description": "타입 체크, 라이브러리 추가 등 프로젝트 구조에 거의 무관한 범용 유틸."
+    }
+  ]
+}
